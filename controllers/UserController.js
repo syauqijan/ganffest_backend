@@ -1,5 +1,5 @@
 import User from "../models/UserModel.js";
-import { genSaltSync, hashSync } from 'bcrypt';
+
 
 
 export const getUsers = async(req, res) =>{
@@ -26,8 +26,8 @@ export const getUserById = async(req, res) =>{
 
 export const createUser = async(req, res) =>{
     const body = req.body;
-    const salt = genSaltSync(10);
-    body.password = hashSync(body.password, salt);
+    // const salt = genSaltSync(10);
+    // body.password = hashSync(body.password, salt);
     try {
         await User.create(body);
         res.status(201).json({msg: "User Created"});

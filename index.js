@@ -9,4 +9,4 @@ app.use(express.json());
 app.use(UserRoute);
 app.use(SubmissionRoute);
 
-app.listen(3000, ()=> console.log('Server up and running...'));
+app.listen(3001, ()=> console.log('Server up and running...'));

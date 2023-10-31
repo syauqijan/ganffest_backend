@@ -7,13 +7,13 @@ import {Sequelize} from "sequelize";
 
 // export default db;
 // const db = new Sequelize('ganffest','root','',{
-//     host: 'localhost',
+//     host: 'api.ganeshafilmfestival.com',
 //     dialect: 'mysql'
 // });
 
 // export default db;
 const db = new Sequelize('gane2307_ganffest','gane2307_ganffest','Ganffest_database',{
-    host: 'localhost',
+    host: 'api.ganeshafilmfestival.com',
     dialect: 'mysql'
 });
 
