@@ -1,6 +1,9 @@
-import { Sequelize, DataTypes } from "sequelize";
-import db from "../config/Database.js";
-import UserModel from "./UserModel.js";
+// import { Sequelize, DataTypes } from "sequelize";
+// import db from "../config/Database.js";
+// import UserModel from "./UserModel.js";
+const db = require('../config/Database');
+const Sequelize = require('sequelize');
+const {DataTypes} = Sequelize;
 
 
 
@@ -43,13 +46,8 @@ const SubmissionModel = db.define('submission', {
 }, {
     freezeTableName: true
 });
-SubmissionModel.belongsTo(UserModel, {
-    foreignKey: 'emailSubmitter', // Mengacu pada kolom 'emailSubmitter'
-    targetKey: 'email',
-    as: 'user',
-});
 
-export default SubmissionModel;
+module.exports = SubmissionModel;
 (async()=>{
     await db.sync();
 })();

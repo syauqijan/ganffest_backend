@@ -1,7 +1,7 @@
-import express from "express";
-import cors from "cors";
-import UserRoute from "./routes/UserRoute.js";
-import SubmissionRoute from "./routes/SubmissionRoute.js";
+const express = require('express');
+const cors = require('cors');
+const UserRoute = require('./routes/UserRoute');
+const SubmissionRoute = require('./routes/SubmissionRoute');
 
 const app = express();
 app.use(cors());
